@@ -1,0 +1,29 @@
+name: main
+on:
+  pull_request:
+
+  push:
+    branches:
+      - main
+
+jobs:
+  run-all:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version-file: "pyproject.toml"
+
+      - name: Install project
+        run: pip install ".[dev]"
+
+      - name: Run pre-commit
+        run: pre-commit run --all-files
+
+      - name: Run pytest
+        run: pytest -v
