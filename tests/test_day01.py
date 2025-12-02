@@ -1,6 +1,6 @@
 from aoc25 import core, day01
 
-data = core.load_file("./downloads/tests/01.txt")
+data = core.load_file("./test_data/01.txt")
 
 
 def test_part1():
