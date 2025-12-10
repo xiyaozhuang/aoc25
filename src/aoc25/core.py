@@ -4,6 +4,7 @@ import aoc25
 from aoc25 import *
 
 
+# FIXME: Do not strip lines when reading files as some puzzles rely on whitespace
 def load_file(path):
     with open(path) as file:
         data = [line.strip() for line in file.readlines()]
@@ -32,4 +33,5 @@ class Solver:
             solution_part1 = module.part1(self.data[n])
             solution_part2 = module.part2(self.data[n])
 
+            self.solutions[f"Day {n}"] = (solution_part1, solution_part2)
             self.solutions[f"Day {n}"] = (solution_part1, solution_part2)
