@@ -34,4 +34,3 @@ class Solver:
             solution_part2 = module.part2(self.data[n])
 
             self.solutions[f"Day {n}"] = (solution_part1, solution_part2)
-            self.solutions[f"Day {n}"] = (solution_part1, solution_part2)
