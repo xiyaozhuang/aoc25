@@ -4,6 +4,7 @@ import aoc25
 from aoc25 import *
 
 
+# FIXME: Do not strip lines when reading files as some puzzles rely on whitespace
 def load_file(path):
     with open(path) as file:
         data = [line.strip() for line in file.readlines()]
