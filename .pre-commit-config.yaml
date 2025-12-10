@@ -21,3 +21,5 @@ repos:
     rev: v8.30.0
     hooks:
       - id: gitleaks
+
+exclude: 06.txt
